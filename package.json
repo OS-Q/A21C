@@ -1,11 +1,11 @@
 {
   "name": "A21C",
   "version": "2.10.20210226",
-  "description": "Arduino for ST STM32 microcontrollers (ST STM32L0 Core)",
+  "description": "Arduino for ST STM32L0 Core",
   "keywords": [
     "framework",
+    "OS-Q",
     "arduino",
-    "stmicroelectronics",
     "stm32",
     "stm32l0"
   ],
