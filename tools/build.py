@@ -136,7 +136,7 @@ env.Append(
     CPPPATH=[
         join(FRAMEWORK_DIR, "system", "CMSIS", "Include"),
         join(FRAMEWORK_DIR, "system", "CMSIS", "Device", "ST", "STM32L0xx",
-             "Include"),
+            "Include"),
         join(FRAMEWORK_DIR, "system", "STM32L0xx", "Include"),
         join(FRAMEWORK_DIR, "cores", "arduino")
     ],
