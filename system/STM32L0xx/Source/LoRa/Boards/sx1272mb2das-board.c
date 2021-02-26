@@ -26,7 +26,7 @@
 #include "sx1272-board.h"
 #include "stm32l0_rtc.h"
 
-/* NUCLEO-L053R8 & NUCLEO-L073RZ
+/* STM32L053R8 & NUCLEO-L073RZ
  */
 #define RADIO_RESET                          STM32L0_GPIO_PIN_PA0           // A0
 
@@ -155,7 +155,7 @@ void SX1272DioDeInit( void )
     stm32l0_exti_detach(RADIO_DIO_0);
     stm32l0_exti_detach(RADIO_DIO_1);
     stm32l0_exti_detach(RADIO_DIO_2);
-    
+
     stm32l0_gpio_pin_configure(RADIO_DIO_0, (STM32L0_GPIO_PARK_NONE | STM32L0_GPIO_MODE_ANALOG));
     stm32l0_gpio_pin_configure(RADIO_DIO_1, (STM32L0_GPIO_PARK_NONE | STM32L0_GPIO_MODE_ANALOG));
     stm32l0_gpio_pin_configure(RADIO_DIO_2, (STM32L0_GPIO_PARK_NONE | STM32L0_GPIO_MODE_ANALOG));
@@ -176,7 +176,7 @@ void SX1272SetRfTxPower( int8_t power )
     {
         power = 14;
     }
-    
+
     paConfig = ( paConfig & RF_PACONFIG_OUTPUTPOWER_MASK ) | ( power + 1 );
 
     SX1272Write( REG_PACONFIG, paConfig );

@@ -26,8 +26,8 @@
  * WITH THE SOFTWARE.
  */
 
-#ifndef _VARIANT_NUCLEO_64_STM32L073RZ_
-#define _VARIANT_NUCLEO_64_STM32L073RZ_
+#ifndef _VARIANT_NUCLEO_STM32L073RZ_
+#define _VARIANT_NUCLEO_STM32L073RZ_
 
 /*----------------------------------------------------------------------------
  *        Definitions
@@ -97,15 +97,30 @@ static const uint8_t BUTTON = PIN_BUTTON;
  * Serial interfaces
  */
 
-#define SERIAL_INTERFACES_COUNT 1
+#define SERIAL_INTERFACES_COUNT 2
 
 #define PIN_SERIAL_RX        (0ul)
 #define PIN_SERIAL_TX        (1ul)
 
+#define PIN_SERIAL_RX        (0ul)
+#define PIN_SERIAL_TX        (1ul)
+
+#define PIN_SERIAL1_RX       (2ul)
+#define PIN_SERIAL1_TX       (8ul)
+
 /*
  * SPI Interfaces
  */
-#define SPI_INTERFACES_COUNT 0
+#define SPI_INTERFACES_COUNT 1
+
+#define PIN_SPI_MISO         (12u)
+#define PIN_SPI_MOSI         (11u)
+#define PIN_SPI_SCK          (13u)
+
+static const uint8_t SS   = 10;
+static const uint8_t MOSI = PIN_SPI_MOSI;
+static const uint8_t MISO = PIN_SPI_MISO;
+static const uint8_t SCK  = PIN_SPI_SCK;
 
 /*
  * Wire Interfaces
@@ -131,6 +146,7 @@ static const uint8_t SCL = PIN_WIRE_SCL;
 
 #ifdef __cplusplus
 extern Uart Serial;
+extern Uart Serial1;
 #endif
 
 // These serial port names are intended to allow libraries and architecture-neutral
@@ -150,6 +166,8 @@ extern Uart Serial;
 //                            pins are NOT connected to anything by default.
 #define SERIAL_PORT_MONITOR         Serial
 #define SERIAL_PORT_HARDWARE1       Serial
+#define SERIAL_PORT_HARDWARE2       Serial1
+#define SERIAL_PORT_HARDWARE_OPEN2  Serial1
 
-#endif /*_VARIANT_NUCLEO_64_STM32L073RZ_ */
+#endif /*_VARIANT_NUCLEO_STM32L073RZ_ */
 

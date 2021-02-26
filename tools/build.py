@@ -22,9 +22,8 @@ assert isdir(FRAMEWORK_DIR)
 
 # board -> variant
 VARIANT_REMAP = {
-    "nucleo_l053r8": "NUCLEO-L053R8",
-    "nucleo_l073rz": "NUCLEO-L073RZ",
-    "disco_l072cz_lrwan1": "B-L072Z-LRWAN1"
+    "nucleo_l053r8": "STM32L053R8",
+    "nucleo_l073rz": "STM32L073RZ"
 }
 
 
