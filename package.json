@@ -1,0 +1,16 @@
+{
+  "name": "A21C",
+  "version": "2.10.20210226",
+  "description": "Arduino for ST STM32 microcontrollers (ST STM32L0 Core)",
+  "keywords": [
+    "framework",
+    "arduino",
+    "stmicroelectronics",
+    "stm32",
+    "stm32l0"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GrumpyOldPizza/ArduinoCore-stm32l0"
+  }
+}
